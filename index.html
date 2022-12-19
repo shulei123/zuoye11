@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册页面</title>
+	</head>
+	<body>
+		<form >
+			姓名：<input type="text" name="" id="user" ><br>
+			密码：<input type="password" name="" id="psw" ><br>
+			再次输入密码：<input type="password" name="" id="paw1"><br>
+			<input type="button" name="" id="" value="提交" onclick=" pass();namex()" />
+			<input type="reset" value="重置"/>
+		
+		</form>
+		
+		<script type="text/javascript">
+		
+			function namex(){
+				var name1 = document.getElementById("user").value;
+				if(name1.length==0){
+					alert("用户名不得为空！");
+				}
+			}
+			function pass(){
+						var password = document.getElementById("psw").value;
+						var passwordx = document.getElementById("paw1").value;
+							if(password.length<6){	
+								alert("输入的密码必须大于六位");
+							}
+							else if(password!=passwordx)
+							{
+								alert("两次密码输入不一致");
+							}
+							else
+							{
+								alert("注册成功"+" "+"用户名："+(document.getElementById("user").value)+" "+"密码："+(document.getElementById("psw").value));
+							}
+						}
+			
+		</script>
+	</body>
+</html>
